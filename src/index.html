@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,42 @@
     <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/main.js"></script>
 </head>
+
 <body>
-    <h1>Здесь должен находиться конетнт</h1>
+    <article class="product-card">
+        <div class="product-card__image-container">
+            <img class="product-card__image" src="./images/product_image.png" alt="Volvo XC40 2024" />
+        </div>
+
+        <div class="product-card__content">
+            <header class="product-card__header">
+                <div class="product-card__title-group">
+                    <h1 class="product-card__title">Volvo XC40</h1>
+                    <span class="product-card__year">2024 </span>
+                </div>
+                <div class="product-card__discount">Скидка 200 000 ₽</div>
+            </header>
+
+            <div class="product-card__specs">
+                <div class="product-card__spec">
+                    <span class="product-card__spec-label">Бензин, 180 л.с.</span>
+                    <span class="product-card__spec-value">2.0 л</span>
+                </div>
+                <div class="product-card__spec">
+                    <span class="product-card__spec-label">Привод</span>
+                    <span class="product-card__spec-value">4x2</span>
+                </div>
+                <div class="product-card__spec">
+                    <span class="product-card__spec-label">6 ступеней</span>
+                    <span class="product-card__spec-value">АКПП</span>
+                </div>
+                <div class="product-card__spec product-card__spec--price">
+                    <span class="product-card__spec-label">Стоимость</span>
+                    <span class="product-card__spec-value">5 131 000 ₽</span>
+                </div>
+            </div>
+        </div>
+    </article>
 </body>
+
 </html>
