@@ -5,7 +5,7 @@ const { src, dest, watch, series } = require('gulp');
 // Компиляция SCSS в CSS
 function compileSass() {
     return src('src/styles/*.scss')
-        .pipe(sass({quietDeps: true, }).on('error', sass.logError))
+        .pipe(sass({ quietDeps: true, }).on('error', sass.logError))
         .pipe(dest('dist/styles'))
         .pipe(browserSync.stream());
 }
@@ -26,7 +26,7 @@ function reloadJs() {
 
 // Копирование PNG изображений
 function processPngImages() {
-    return src('src/images/*.png', {encoding: false})
+    return src('src/images/*.png', { encoding: false })
         .pipe(dest('dist/images'))
         .pipe(browserSync.stream());
 }
@@ -41,7 +41,7 @@ function processSvgImages() {
 
 // Копирование WOFF2 шрифтов
 function processFonts() {
-    return src('src/fonts/*.woff2', {encoding: false})
+    return src('src/fonts/*.woff2', { encoding: false })
         .pipe(dest('dist/fonts'))
         .pipe(browserSync.stream());
 }
@@ -55,7 +55,7 @@ function serve() {
     });
 
     // Наблюдение за изменениями файлов
-    watch('src/styles/*.scss', compileSass);
+    watch('src/styles/**/*.scss', compileSass);
     watch('src/*.html', reloadHtml);
     watch('src/scripts/*.js', reloadJs);
     watch('src/images/*.png', processPngImages);
