@@ -1,7 +1,3 @@
-window.addEventListener('DOMContentLoaded', () => {
-    console.log('App init');
-})
-
 document.addEventListener('DOMContentLoaded', function () {
     const productCard = document.querySelector('.product-card');
     const title = document.querySelector('.product-card__title');

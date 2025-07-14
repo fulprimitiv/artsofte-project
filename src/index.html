@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>TD Тех.задание для верстальщика</title>
     <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/main.js"></script>
@@ -16,32 +16,32 @@
         </div>
 
         <div class="product-card__content">
-            <header class="product-card__header">
+            <div class="product-card__header">
                 <div class="product-card__title-group">
                     <h1 class="product-card__title">Volvo XC40</h1>
-                    <span class="product-card__year">2024 </span>
+                    <span class="product-card__year">2024</span>
                 </div>
                 <div class="product-card__discount">Скидка 200 000 ₽</div>
-            </header>
+            </div>
 
-            <div class="product-card__specs">
+            <dl class="product-card__specs">
                 <div class="product-card__spec">
-                    <span class="product-card__spec-label">Бензин, 180 л.с.</span>
-                    <span class="product-card__spec-value">2.0 л</span>
+                    <dt class="product-card__spec-label">Бензин, 180 л.с.</dt>
+                    <dd class="product-card__spec-value">2.0 л</dd>
                 </div>
                 <div class="product-card__spec">
-                    <span class="product-card__spec-label">Привод</span>
-                    <span class="product-card__spec-value">4x2</span>
+                    <dt class="product-card__spec-label">Передний</dt>
+                    <dd class="product-card__spec-value">4x2</dd>
                 </div>
                 <div class="product-card__spec">
-                    <span class="product-card__spec-label">6 ступеней</span>
-                    <span class="product-card__spec-value">АКПП</span>
+                    <dt class="product-card__spec-label">6 ступеней</dt>
+                    <dd class="product-card__spec-value">АКПП</dd>
                 </div>
                 <div class="product-card__spec product-card__spec--price">
-                    <span class="product-card__spec-label">Стоимость</span>
-                    <span class="product-card__spec-value">5 131 000 ₽</span>
+                    <dt class="product-card__spec-label">Стоимость</dt>
+                    <dd class="product-card__spec-value">5 131 000 ₽</dd>
                 </div>
-            </div>
+            </dl>
         </div>
     </article>
 
@@ -58,7 +58,7 @@
             </button>
 
             <div class="modal__logo-container">
-                <img class="modal__logo" src="./images/logo.svg" alt="Логотип" />
+                <img class="modal__logo" src="./images/logo.svg" alt="Логотип">
             </div>
             <div class="modal__message">
                 <h2 class="modal__title">Ваша заявка отправлена!</h2>
