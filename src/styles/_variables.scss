@@ -8,28 +8,39 @@ $accent-tertiary: #e1e0e0;
 $bg-primary: #f6f7f8;
 $bg-secondary: #ffffff;
 $bg-done: #d7f7c2;
-$bg-overlay: rgba(0, 0, 0, 0.40);
+$bg-image-overlay: #E4EAF0;
 
+$bg-overlay: rgba(0, 0, 0, 0.40);
 $shadow-color: rgba(0, 0, 0, 0.05);
 
 $border-radius-card: 8px;
 $border-radius-modal: 12px;
 
-$font-size-sm: 12px;
-$font-size-md: 20px;
-$font-size-modal-title: 24px;
-$font-size-modal-subtitle: 15px;
-$font-size-button: 16px;
-
-$line-height-md: 24px;
-$line-height-modal-title: 32px;
-$line-height-modal-subtitle: 20px;
-$line-height-button: 20px;
-
-$shadow: 0px 4px 10px 0px $shadow-color;
-
 $font-family-base: 'Montserrat', sans-serif;
+$font-size-base: 16px;
 
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
+
+$font-size-xs: 0.5rem;  
+$font-size-xsm: 0.625rem; 
+$font-size-sm: 0.75rem;     
+$font-size-md: 1rem;      
+$font-size-lg: 1.25rem;  
+$font-size-xl: 1.5rem;  
+
+$line-height-tight: 0.75rem;  
+$line-height-base: 1rem;     
+$line-height-relaxed: 1.5rem; 
+$line-height-loose: 2rem;     
+
+$font-size-modal-title: $font-size-xl;
+$font-size-modal-subtitle: 0.9375rem;
+$font-size-button: $font-size-md;
+
+$line-height-modal-title: $line-height-loose;
+$line-height-modal-subtitle: 1.25rem; 
+$line-height-button: 1.25rem; 
+
+$shadow: 0px 4px 10px 0px $shadow-color;

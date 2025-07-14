@@ -2,6 +2,7 @@
 
 html {
     font-family: $font-family-base;
+    min-width: 100vw;
 }
 
 body {
@@ -11,5 +12,78 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    min-width: 100vw;
     padding: 100px;
+
+    // Планшетная версия (в макетах ее нет) + под эти размеры слетает условие пиксель первект на десктоп.
+    // Адаптив из-за этого и не стал делать на данные размеры из-за своеобразного контейнра в виде body + padding: 100px; 
+    // Странное решение, но пытался соответсвовать макету)
+    @media (min-width: 515px) and (max-width: 860px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+        
+        &::before {
+            content: "TABLET";
+            font-size: 48px;
+            font-weight: $font-weight-semibold;
+            color: $text-primary;
+            text-align: center;
+        }
+        
+        > * {
+            display: none !important;
+        }
+    }
+
+    // Мобильная версия (320px + 2 отступа по 20px ; 475px + + 2 отступа по 20px), поэтому и взял такой интервал
+    @media (min-width: 360px) and (max-width: 515px) {
+        display: inline-flex;
+        padding: 40px 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // Меньше мобильной версии
+     @media (max-width: 359.9px) {
+        display: inline-flex;
+        padding: 40px 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+          
+        &::before {
+            content: "SMALL";
+            font-size: 48px;
+            font-weight: $font-weight-semibold;
+            color: $text-primary;
+            text-align: center;
+        }
+        
+        > * {
+            display: none !important;
+        }
+    }
 }
+
+// .is-mobile & {
+//     &:hover,
+//     &:active,
+//     &:focus {
+//     box-shadow: none !important;
+//     transform: none !important;
+            
+//     .product-card__title {
+//         color: $text-primary !important;
+//     }
+//     }
+        
+//     cursor: default !important;
+
+//     user-select: none !important;
+//     -webkit-user-select: none !important;
+//     -webkit-touch-callout: none !important;
+//     }
