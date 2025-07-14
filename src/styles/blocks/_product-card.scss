@@ -1,8 +1,8 @@
 @use "../variables" as *;
+@use "../mixins.scss" as *;
 
 .product-card {
-    display: flex;
-    align-items: center;
+    @include flex-center(row);
     border-radius: $border-radius-card;
     background: $bg-secondary;
     max-height: 124px;
@@ -37,11 +37,9 @@
     }
     
     &__image-container {
-        display: flex;
+        @include flex-center();
         width: 165px;
         height: 124px;
-        justify-content: center;
-        align-items: center;
         flex-shrink: 0;
         
         @media (max-width: 515px) {
@@ -49,7 +47,7 @@
             height: calc((100vw - 40px) / 1.33);
             min-height: 210px;
             max-height: 327px;
-            align-self: stretch; // 
+            align-self: stretch;
             background: $bg-image-overlay;
             border-radius: $border-radius-card $border-radius-card 0 0;
         }
@@ -70,11 +68,9 @@
     }
     
     &__content {
-        display: flex;
+        @include flex-center(column, 32px);
         padding: 12px 12px 12px 16px;
-        flex-direction: column;
         align-items: flex-start;
-        gap: 32px;
         background: $bg-secondary;
         flex: 1;
         
@@ -88,7 +84,7 @@
     }
     
     &__header {
-        display: flex;
+        @include flex-center(row);
         justify-content: space-between;
         align-items: flex-start;
         align-self: stretch;
@@ -99,10 +95,8 @@
     }
     
     &__title-group {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-
+        @include flex-center(row, 4px);
+        justify-content: flex-start;
         @media (max-width: 515px) {
             flex: 1;
             min-width: 0;
@@ -110,19 +104,15 @@
     }
     
     &__title {
-        color: $text-primary;
-        font-family: $font-family-base;
-        font-size: $font-size-lg;
-        font-weight: $font-weight-semibold;
+        @include text($font-size-lg, $font-weight-semibold, $text-primary);
         line-height: $line-height-relaxed;
-        margin: 0;
         cursor: text;
         user-select: text;
         transition: color 0.2s ease;
         width: 117px;
         
         @media (max-width: 515px) {
-            font-size: $font-size-sm;
+            @include text($font-size-sm, $font-weight-semibold, $text-primary);
             line-height: $line-height-base;
             width: auto;
             user-select: none;
@@ -136,15 +126,12 @@
     }
     
     &__year {
-        color: $text-secondary;
-        font-family: $font-family-base;
-        font-size: $font-size-lg;
-        font-weight: $font-weight-medium;
+        @include text($font-size-lg, $font-weight-medium, $text-secondary);
         line-height: $line-height-relaxed;
         width: 50px;
         
         @media (max-width: 515px) {
-            font-size: $font-size-sm;
+            @include text($font-size-sm, $font-weight-medium, $text-secondary);
             line-height: $line-height-base;
             width: auto;
             flex-shrink: 0;
@@ -152,22 +139,17 @@
     }
     
     &__discount {
-        display: flex;
+        @include flex-center();
         padding: 2px 8px;
-        justify-content: center;
-        align-items: center;
         background: $bg-done;
         border-radius: 4px;
-        color: $accent-done;
-        font-family: $font-family-base;
-        font-size: $font-size-sm;
-        font-weight: $font-weight-regular;
+        @include text($font-size-sm, $font-weight-regular, $accent-done);
         line-height: $line-height-base;
         width: 127px;
         
         @media (max-width: 515px) {
             padding: 0px 4px;
-            font-size: $font-size-xsm;
+            @include text($font-size-xsm, $font-weight-regular, $accent-done);
             width: auto;
             flex-shrink: 0;
             white-space: nowrap;
@@ -175,9 +157,8 @@
     }
     
     &__specs {
-        display: flex;
+        @include flex-center(row, 40px);
         align-items: auto;
-        gap: 40px;
         width: 463px;
         
         @media (max-width: 515px) {
@@ -189,10 +170,8 @@
     }
     
     &__spec {
-        display: flex;
-        flex-direction: column;
+        @include flex-center(column, 8px);
         align-items: flex-start;
-        gap: 8px;
         
         @media (max-width: 515px) {
             gap: 2px;
@@ -216,12 +195,12 @@
         
         &--price {
             .product-card__spec-value {
-                color: $text-primary;
-                font-weight: $font-weight-semibold;
+                @include text($font-size-lg, $font-weight-semibold, $text-primary);
                 cursor: text;
                 user-select: text;
                 
                 @media (max-width: 515px) {
+                    @include text($font-size-sm, $font-weight-semibold, $text-primary);
                     cursor: default;
                     user-select: none;
                     -webkit-touch-callout: none;
@@ -232,14 +211,11 @@
     }
     
     &__spec-label {
-        color: $text-secondary;
-        font-family: $font-family-base;
-        font-size: $font-size-sm;
-        font-weight: $font-weight-regular;
+        @include text($font-size-sm, $font-weight-regular, $text-secondary);
         line-height: $line-height-tight;
         
         @media (max-width: 515px) {
-            font-size: $font-size-xs;
+            @include text($font-size-xs, $font-weight-regular, $text-secondary);
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -247,14 +223,11 @@
     }
     
     &__spec-value {
-        color: $text-secondary;
-        font-family: $font-family-base;
-        font-size: $font-size-lg;
-        font-weight: $font-weight-medium;
+        @include text($font-size-lg, $font-weight-medium, $text-secondary);
         line-height: $line-height-relaxed;
         
         @media (max-width: 515px) {
-            font-size: $font-size-sm;
+            @include text($font-size-sm, $font-weight-medium, $text-secondary);
             line-height: $line-height-base;
             overflow: hidden;
             text-overflow: ellipsis;
