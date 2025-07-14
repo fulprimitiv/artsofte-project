@@ -39,17 +39,19 @@
         box-shadow: $shadow;
         z-index: 1001;
 
-  @media (max-width: 515px) {
-        width: calc(100% - 40px);
-    }
+    @media (max-width: 515px) {
+            width: calc(100% - 40px);
+            padding: 16px;
+            height: auto;
+        }
     }
 
 	 &__close {
         width: 30px;
         height: 30px;
         position: absolute;
-        right: 32px;
-        top: 32px;
+        right: 16px;
+        top: 16px;
         background: none;
         border: none;
         cursor: pointer;
