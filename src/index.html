@@ -44,6 +44,29 @@
             </div>
         </div>
     </article>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="successModal">
+        <div class="modal__overlay"></div>
+        <div class="modal__container">
+            <button class="modal__close" type="button" aria-label="Закрыть модальное окно">
+                <svg class="modal__close-icon" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.5 7.5L7.5 22.5M7.5 7.5L22.5 22.5" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <div class="modal__logo-container">
+                <img class="modal__logo" src="./images/logo.svg" alt="Логотип" />
+            </div>
+            <div class="modal__message">
+                <h2 class="modal__title">Ваша заявка отправлена!</h2>
+                <p class="modal__subtitle">Спасибо за обращение! Мы свяжемся с вами в ближайшее время</p>
+            </div>
+            <button class="modal__button" type="button">Вернуться в каталог</button>
+        </div>
+    </div>
 </body>
 
 </html>

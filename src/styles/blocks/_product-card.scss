@@ -9,6 +9,7 @@
 
     &:hover {
         box-shadow: $shadow;
+        cursor: pointer;
 
         .product-card__title {
             color: $accent-primary;
@@ -106,6 +107,7 @@
             .product-card__spec-value {
                 color: $text-primary;
                 font-weight: $font-weight-semibold;
+                cursor: text;
             }
         }
     }
